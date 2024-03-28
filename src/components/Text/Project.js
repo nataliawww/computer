@@ -1,6 +1,6 @@
 // Project.jsx
 import React from 'react';
-import { ProjectData } from './constants/projectData';
+import { ProjectData } from '../../constants/projectData';
 // Assuming projectData is imported or defined in the same file
 const Project = ({ projectId }) => {
   const project = ProjectData.find(p => p.id === projectId);

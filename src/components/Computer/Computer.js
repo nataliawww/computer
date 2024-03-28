@@ -2,11 +2,11 @@ import * as THREE from 'three'
 import { useMemo, useContext, createContext, useRef, Suspense, useState, useEffect } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import { useGLTF, Merged, Text, PerspectiveCamera, Plane, useAspect, useVideoTexture, Image, Environment } from '@react-three/drei'
-import {Glitter} from './Glitter'
-import {Static} from './Static'
-import {Spiral} from './Spiral'
-import {Screen} from './components/Computer/Screen'
-import {ScreenTetris} from './components/Tetris/ScreenTetris'
+import {Glitter} from '../../shaders/Glitter'
+import {Static} from '../../shaders/Static'
+import {Spiral} from '../../shaders/Spiral'
+import {Screen} from './Screen'
+import {ScreenTetris} from '../Tetris/ScreenTetris'
 
 THREE.ColorManagement.legacyMode = false
 

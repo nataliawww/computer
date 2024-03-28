@@ -1,5 +1,5 @@
 {
-  "name": "Natalia Wojtkowska Portfolio",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
   "keywords": [
@@ -12,7 +12,6 @@
     "@react-three/fiber": "8.9.1",
     "@react-three/postprocessing": "2.9.2",
     "@types/three": "0.146.0",
-    "glslify": "^7.1.1",
     "gsap": "^3.12.2",
     "maath": "0.4.2",
     "react": "18.2.0",

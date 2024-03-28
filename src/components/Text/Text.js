@@ -1,5 +1,5 @@
 import Project from './Project'
-import './App.scss';
+import '../../App.scss';
 import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap/all'
 

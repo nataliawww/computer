@@ -1,10 +1,9 @@
 import { Canvas, useFrame } from '@react-three/fiber'
-import { useGLTF, MeshReflectorMaterial, BakeShadows } from '@react-three/drei'
+import { MeshReflectorMaterial, BakeShadows } from '@react-three/drei'
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import { easing } from 'maath'
-import { Instances, Computer } from './Computer'
-import gsap from 'gsap';
-import Text from './Text'
+import { Instances, Computer } from './components/Computer/Computer'
+import Text from './components/Text/Text'
 import { useState } from 'react'
 
 
