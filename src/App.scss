@@ -47,8 +47,8 @@ body {
   }
   @include isPortrait {
     top: 20px;
-    overflow: scroll;
     height: 100%;
+    pointer-events: none;
   }
   @include isLandscape {
     top: calc(-230px - 8vw);
