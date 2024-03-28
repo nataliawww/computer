@@ -1,0 +1,14 @@
+$breakpoints: (
+  // Predefined breakpoints
+  medium: 500px,
+  tablet: 700px,
+  desktop: 1000px,
+  large: 1400px
+);
+
+// Export for JS
+:export {
+  @each $key, $value in $breakpoints {
+    #{$key}: $value;
+  }
+}

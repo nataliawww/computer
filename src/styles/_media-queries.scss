@@ -1,0 +1,43 @@
+/*
+* Breakpoint wider than breakpoint (INCLUSIVE)
+*
+* @example
+* @include above('desktop') { color: hotpink; }
+*
+*/
+@mixin above($breakpoint) {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+/*
+* Breakpoint more narrow than breakpoint (EXCLUSIVE)
+*
+* @example
+* @include under('desktop') { color: hotpink; }
+*
+*/
+@mixin under($breakpoint) {
+  @media (max-width: map-get($breakpoints, $breakpoint) - 1px) {
+    @content;
+  }
+}
+
+/*
+* Breakpoint for portrait orientation
+*/
+@mixin isPortrait() {
+  @media (orientation: portrait) {
+    @content;
+  }
+}
+
+/*
+* Breakpoint for landscape orientation
+*/
+@mixin isLandscape() {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
