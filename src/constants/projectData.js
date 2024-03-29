@@ -10,7 +10,7 @@ export const ProjectData = [
   {
     id: 'interland',
     title: 'Google Interland',
-    paragraph: 'A game designed for children to learn about the dangers of being online. My favourite project that I ever worked on. ❤️',
+    paragraph: 'A game designed for children to learn about the dangers of being online. Free, interactive and browser-based it takes kids on an adventure through four worlds, each of them carrying an important lesson about security, cyberbulling, phishing and hacking.',
     tech: 'WebGL, Three.js, Blender, Lottie, Babel, Pug, GreenSock, Modernizr',
     role: 'Front End Engineer',
     url: 'https://www.14islands.com/work/interland',
@@ -19,7 +19,7 @@ export const ProjectData = [
   {
     id: 'jffd',
     title: 'Just Food For Dogs',
-    paragraph: 'A subscription service for one of the biggest fresh pet food providers in the US. At the  personalized plan for We built the entire customer journey, from account management to checkout and payment integration to create ',
+    paragraph: 'A subscription service for one of the biggest fresh pet food providers in the US. A landing page with an entire customer journey, from account management to checkout, creating a personalised food plan for dog owners, and payment integration. ',
     tech: 'Vue.js, Stripe, Modernizr, Lottie, Heroku',
     role: 'Front End Engineer',
     url: 'https://www.14islands.com/work/justfoodfordogs',
@@ -27,7 +27,7 @@ export const ProjectData = [
   {
     id: 'adidas',
     title: 'Adias EQT',
-    paragraph: 'For the launch of Adidas Original EQT range, we created a campaign website with a WebGL 360° video experience, where the user could interact directly with the film and explore the products.',
+    paragraph: 'A campaign website with a WebGL 360° video experience, where the user could interact directly with the film and explore the products. Built for the launch of Adidas Original EQT range',
     tech: 'Modernizr, Three.js, GreenSock, Pug',
     role: 'Front End Engineer',
     url: 'https://www.northkingdom.com/case/adidas-eqt',
