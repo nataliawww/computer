@@ -138,9 +138,11 @@ a {
 
 .text-container {
   position: absolute;
+  // pointer-events: none;
   width: 100%;
   @include isPortrait {
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     height: 100%;
   }
   @include isLandscape {
@@ -152,7 +154,7 @@ a {
   padding: calc(20px + 1.7vw);
   left: 0;
   display: grid;
-  grid-template-columns: 10vw 10vw 50vw 10vw;
+  grid-template-columns: 10vw 10vw 13vw 30vw 10vw;
   column-gap: 5vw;
   @include isPortrait {
     margin-bottom: calc(30px + 1.7vw);
@@ -164,7 +166,7 @@ a {
 
 .bottom-aligned {
   @include isPortrait {
-    margin-top: 430px;
+    margin-top: calc(300px + 1.7vw);
   }
 }
 
@@ -181,7 +183,7 @@ a {
     margin-left: calc(-20px - 1.7vw);
     width: calc(100% + 3 * (20px + 1.7vw));
     display: flex;
-    overflow-x: auto;
+    overflow-x: scroll;
     li {
       margin-right: calc(10px + 1vw);
       background: #d3bff1;

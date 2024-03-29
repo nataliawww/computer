@@ -27,8 +27,8 @@ export default function Text(props) {
       <div className="text-container">
         <div className="text">
           <div className="project-description" ref={ref}>
-          <Project projectId={currentProject} />
-        </div>
+            <Project key={currentProject} projectId={currentProject} />
+          </div>
           <div className="column">
             <h2>Selected projects</h2>
             <ul className="clickable projects">
@@ -64,8 +64,14 @@ export default function Text(props) {
             </div>
           </div>
           <div className="column">
+            <h2>About me</h2>
+            <ul className="clickable projects">
+              <li><a onClick={() => onProjectClick('me')}>Hello!</a></li>
+            </ul>
+          </div>
+          <div className="column">
             <h2>Contact</h2>
-            <ul>
+            <ul className="clickable"> 
               <li><a href="mailto:nataliawtk@gmail.com" target="_blank">Email</a> <span className="mail">💌</span></li>
               <li><a href="https://www.linkedin.com/in/natalia-wojtkowska/" target="_blank">LinkedIn</a></li>
               <li><a href="https://twitter.com/titol92" target="_blank">Twitter</a></li>

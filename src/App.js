@@ -36,7 +36,7 @@ export default function App() {
       <spotLight position={[10, 20, -3]} angle={0.12} penumbra={1} intensity={2} castShadow shadow-mapSize={1024} />
       <group position={[-0, -1, 0]}>
         <Instances>
-          <Computer onClick={onComputerClick} scale={0.5} type={screenType} video={video} />
+          <Computer onClick={onComputerClick} scale={0.5} type={screenType} video={video} image={video} />
           <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]}>
           <planeGeometry args={[50, 50]} />
           <MeshReflectorMaterial

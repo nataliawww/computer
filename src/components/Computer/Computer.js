@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import { useMemo, useContext, createContext, useRef, Suspense, useState, useEffect } from 'react'
-import { useFrame, useThree } from '@react-three/fiber'
-import { useGLTF, Merged, Text, PerspectiveCamera, Plane, useAspect, useVideoTexture, Image, Environment } from '@react-three/drei'
+import { useFrame, useThree, useLoader } from '@react-three/fiber'
+import { useGLTF, Merged, Text, PerspectiveCamera, Plane, useAspect, useVideoTexture, Environment } from '@react-three/drei'
 import {Glitter} from '../../shaders/Glitter'
 import {Static} from '../../shaders/Static'
 import {Spiral} from '../../shaders/Spiral'
@@ -57,12 +57,11 @@ export function Computer(props) {
       { props.type === 'garfield' && <ScreenGarfield frame="Object_215" panel="Object_216" position={[0, 0.38, 0]} scale={1} /> }
       { props.type === 'shader' && <ScreenShader static frame="Object_215" panel="Object_216" position={[0, 0.38, 0]} /> }
       { props.type === 'video' && <ScreenVideo video={props.video} frame="Object_215" panel="Object_216" position={[0, 0.38, 0]} /> }
-      { props.type === 'image' && <ScreenImage video={props.image} frame="Object_215" panel="Object_216" position={[0, 0.38, 0]} /> }
+      { props.type === 'image' && <ScreenImage image={props.video} frame="Object_215" panel="Object_216" position={[0, 0.38, 0]} /> }
     </group>
   )
 }
 
-/* Renders a monitor with some text */
 function ScreenText({ invert, x = 0, y = 0, ...props }) {
   const textRef = useRef()
   const rand = Math.random() * 10000
@@ -229,6 +228,18 @@ function ScreenVideo(props) {
       <Video {...props} />
     </Screen>
   )
+}
+
+function Image({ image }) {
+  const texture = useLoader(THREE.TextureLoader, `/${image}.jpg`);
+  const size = useAspect(360, 360, 0.5); // Adjust the aspect ratio as needed
+  
+  return (
+    <mesh scale={size} position={[0, 0.7, 0]}>
+      <planeGeometry args={[1, 1]} />
+      <meshBasicMaterial map={texture} />
+    </mesh>
+  );
 }
 
 function ScreenImage(props) {

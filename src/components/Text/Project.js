@@ -10,7 +10,8 @@ const Project = ({ projectId }) => {
       {project ? (
         <div id={project.id}>
           <p><i>{project.title}</i></p>
-          <p>{project.description}</p>
+          <p>{project.paragraph}</p>
+          {project.paragraph2 && <p>{project.paragraph2}</p>}
           { project.tech && <p className="no-margin"><i>Tech stack:</i> {project.tech}</p> }
           { project.role && <p><i>My role:</i> {project.role}</p> }
           <ul className="clickable">
