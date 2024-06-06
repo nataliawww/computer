@@ -41,6 +41,7 @@ export default function Text(props) {
               <li><a onClick={() => onProjectClick('adidas')}>Adidas EQT</a></li>
               <li><a onClick={() => onProjectClick('balloon')}>WebVR balloon ride</a></li>
               <li><a onClick={() => onProjectClick('flamingo')}>WebVR sunset</a></li>
+              <li><a onClick={() => onProjectClick('marge')}>WebAR</a></li>
             </ul>
           </div>
           <div className="column bottom-aligned">

@@ -83,4 +83,10 @@ export const ProjectData = [
     url: 'https://www.amazon.com/Complete-Guide-360-Degree-photography/dp/1781575398',
     siteUrl: 'https://flamingo-sunset.glitch.me/',
   },
+  {
+    id: 'marge',
+    title: 'WebAR experiments',
+    paragraph: 'I also love playing around with web AR and have made side projects like AR tamagotchi pet dog, an AR weather app protoype or just funny little scenes like Marge yelling from the top of the building',
+    tech: '8th Wall / r3f + ngrok',
+  },
 ]; 
